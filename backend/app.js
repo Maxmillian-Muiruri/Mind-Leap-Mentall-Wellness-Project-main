@@ -13,7 +13,6 @@ import authRoutes from "./routes/auth.js";
 import adminRoutes from "./routes/admin.js";
 import { auth } from "./middleware/auth.js";
 import usersRouter from "./routes/users.js";
-import adminAppointmentsRouter from "./routes/adminAppointments.js";
 
 const app = express();
 
@@ -33,9 +32,9 @@ app.use(limiter);
 
 // Routes
 app.use("/api/admin/appointments", appointmentsRouter);
+app.use("/api/appointments", appointmentsRouter);
 app.use("/api/auth", authRoutes);
 app.use("/api/admin/users", usersRouter);
-app.use("/api/admin/appointments", adminAppointmentsRouter);
 
 app.use(
   "/api/admin",
