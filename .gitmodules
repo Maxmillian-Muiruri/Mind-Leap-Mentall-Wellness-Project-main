@@ -1,0 +1,3 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/Maxmillian-Muiruri/Mind-Leap-Mentall-Wellness-Project.git
