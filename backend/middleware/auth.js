@@ -32,12 +32,12 @@ export const auth = () => {
 export const verifyAdmin = (req, res, next) => {
   console.time("Verify Admin Execution Time"); // Start timing
   if (!req.user || !req.user.isAdmin) {
-    console.timeEnd("Verify Admin Execution Time"); // End timing
+    console.timeEnd("Verify Admin Execution Time");
     return res.status(403).json({
       status: "fail",
       message: "Admin privileges required",
     });
   }
-  console.timeEnd("Verify Admin Execution Time"); // End timing
+  console.timeEnd("Verify Admin Execution Time");
   next();
 };
